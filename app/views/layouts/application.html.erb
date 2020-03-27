@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Festiguide</title>
+  <title>FestiGuide</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'materialize', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-<%= yield %>
+<div id="page">
+  <div id="body">
+    <nav>
+      <div id="menu" class="nav-wrapper">
+        <a class="left brand-logo" href="#!">FestiGuide</a>
+        <ul class="right hide-on-small-and-down">
+          <li class="active"><%= link_to "Festivals", '/festivals/index' %></li>
+          <li><a href="app/views/layouts/add_festival.html.erb">Add new festival</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 </html>

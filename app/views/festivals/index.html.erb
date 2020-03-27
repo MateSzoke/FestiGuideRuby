@@ -1,0 +1,17 @@
+<div class="row">
+  <% @festivals.each { |festival| %>
+    <div class="col s12 m4 l3">
+      <%= link_to festival_show_path do %>
+        <div class="card festival-card">
+          <div class="card-image">
+            <%= image_tag festival.imgSrc %>
+            <span class="card-title"><%= festival.name %></span>
+          </div>
+          <div class="card-content">
+            <p><%= "#{festival.startDate} - #{festival.endDate}" %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% } %>
+</div>

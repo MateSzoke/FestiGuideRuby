@@ -1,0 +1,60 @@
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <%= link_to "Festivals", '/festivals/index', class: "breadcrumb" %>
+      <a class="breadcrumb" href=""><%= @festival.name %>></a>
+    </div>
+  </div>
+</nav>
+
+<div class="center">
+  <%= image_tag @festival.imgSrc, :style => "height: 100px" %>
+</div>
+
+<div class="center"><b>Lorem stage</b>
+
+
+  <table class="striped">
+    <thead>
+    <tr>
+      <th>2020. 06. 06.</th>
+      <th>2020. 06. 07.</th>
+      <th>2020. 06. 08.</th>
+      <th>2020. 06. 09.</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>Alvin 19:00</td>
+      <td>Alvin 19:00</td>
+      <td>Alvin 19:00</td>
+      <td>Alvin 19:00</td>
+    </tr>
+    <tr>
+      <td>Eclair 20:30</td>
+      <td>Eclair 20:30</td>
+      <td>Eclair 20:30</td>
+      <td>Eclair 20:30</td>
+    </tr>
+    <tr>
+      <td>30y 23:30</td>
+      <td>30y 23:30</td>
+      <td>30y 23:30</td>
+    </tr>
+    <tr>
+      <td>Parov Stelar 0:30</td>
+      <td>Parov Stelar 0:30</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <div class="center">
+    <%= link_to "Edit", '/festivals/index', class: "waves-effect waves-light btn-large" %>
+
+    <%= link_to festivals_index_path do %>
+      <%= image_tag "https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png", :style => "height: 50px; margin-top: 25px; padding-top: 20px; margin-left: 20px" %>
+    <% end %>
+  </div>
+</div>
