@@ -4,11 +4,11 @@
       <%= link_to festival_show_path do %>
         <div class="card festival-card">
           <div class="card-image">
-            <%= image_tag festival.imgSrc %>
+            <%= image_tag festival.imgSrc, :style => "height: 250px" %>
             <span class="card-title"><%= festival.name %></span>
           </div>
           <div class="card-content">
-            <p><%= "#{festival.startDate} - #{festival.endDate}" %></p>
+            <p><%= "#{l festival.startDate, format: :date} - #{l festival.endDate, format: :date}" %></p>
           </div>
         </div>
       <% end %>

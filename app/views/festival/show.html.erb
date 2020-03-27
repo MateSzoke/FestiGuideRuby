@@ -1,14 +1,14 @@
 <nav>
   <div class="nav-wrapper">
     <div class="col s12">
-      <%= link_to "Festivals", '/festivals/index', class: "breadcrumb" %>
+      <%= link_to "Festivals", festivals_index_path, class: "breadcrumb" %>
       <a class="breadcrumb" href=""><%= @festival.name %>></a>
     </div>
   </div>
 </nav>
 
 <div class="center">
-  <%= image_tag @festival.imgSrc, :style => "height: 100px" %>
+  <%= image_tag @festival.imgSrc, :style => "height: 200px" %>
 </div>
 
 <div class="center"><b>Lorem stage</b>

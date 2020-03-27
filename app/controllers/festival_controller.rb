@@ -9,7 +9,7 @@ class FestivalController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_festival
     #@festival = Festival.find(params[:id])
-    @festival = FestivalBase.new(name: 'Volt festival', imgSrc: 'https://nepszava.hu/i/16/9/1/1238039.jpg', startDate: '2020. julius 1.', endDate: '2020. julius 5.')
+    @festival = FestivalBase.new(name: 'Volt festival', imgSrc: 'https://nepszava.hu/i/16/9/1/1238039.jpg', startDate: Time.new(2020, 6, 1), endDate: Time.new(2020, 6, 1))
   end
 
   # Only allow a list of trusted parameters through.

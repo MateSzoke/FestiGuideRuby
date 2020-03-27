@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+
+  time:
+    formats:
+      default: '%d/%M/%Y'
+      datetime: '%Y.%m.%d %H:%M:%s'
+      date: '%Y. %B %d.'

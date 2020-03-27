@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200326) do
+ActiveRecord::Schema.define(version: 202003271) do
 
-  create_table "festival_bases", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "festival_bases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", limit: 100
     t.string "imgSrc", limit: 100
-    t.string "startDate", limit: 20
-    t.string "endDate", limit: 20
+    t.datetime "startDate"
+    t.datetime "endDate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

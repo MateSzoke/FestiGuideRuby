@@ -14,10 +14,10 @@
   <div id="body">
     <nav>
       <div id="menu" class="nav-wrapper">
-        <a class="left brand-logo" href="#!">FestiGuide</a>
+        <%= link_to "FestiGuide", festivals_index_path, class: "left brand-logo" %>
         <ul class="right hide-on-small-and-down">
-          <li class="active"><%= link_to "Festivals", '/festivals/index' %></li>
-          <li><a href="app/views/layouts/add_festival.html.erb">Add new festival</a></li>
+          <li class="active"><%= link_to "Festivals", festivals_index_path %></li>
+          <li><%= link_to "Add new festival", festivals_index_path %></li>
         </ul>
       </div>
     </nav>
