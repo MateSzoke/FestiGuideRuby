@@ -37,3 +37,7 @@ en:
       default: '%d/%M/%Y'
       datetime: '%Y.%m.%d %H:%M:%s'
       date: '%Y. %B %d.'
+
+  date:
+    formats:
+      date: '%Y. %B %d.'
