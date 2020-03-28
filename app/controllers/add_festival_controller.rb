@@ -1,10 +1,17 @@
-class FestivalController < ApplicationController
-  before_action :set_festival, only: [:show]
+class AddFestivalController < ApplicationController
+  before_action :set_festival, only: [:update]
 
-  def show
+  def new
+    @festival = FestivalBase.new
+    @days = []
+    @shows = []
+  end
+
+  def stage
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_festival
     #@festival = Festival.find(params[:id])

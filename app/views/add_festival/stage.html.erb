@@ -1,5 +1,5 @@
 <div class="top-left-margin">
-  <a class="waves-effect waves-light btn-large row m2" href="app/views/layouts/add_festival.html.erb">Back</a>
+  <%= link_to "Back", add_festival_new_path, class: "waves-effect waves-light btn-large row m2" %>
 </div>
 <div class="row"><b>Lorem stage</b>
 
@@ -15,17 +15,17 @@
   <div class="row">
     <div class="input-field col m2">
       <input class="validate" id="performer" placeholder="Band" type="text">
-      <label for="performer">Performer</label>
+      <label for="performer"></label>
     </div>
     <div class="input-field col m2">
       <input class="validate" id="time" placeholder="18:00" type="text">
-      <label for="time">Time</label>
+      <label for="time"></label>
     </div>
   </div>
 
 
   <div class="center">
-    <a class="waves-effect btn-large background transparent" href="app/views/layouts/festivals.html.erb" style="color: #5a5a5a">Cancel</a>
-    <a class="waves-effect waves-light btn-large" href="app/views/layouts/festivals.html.erb">Add festival</a>
+    <%= link_to "Cancel", festivals_index_path, class: "waves-effect btn-large background transparent", style: "color: #5a5a5a" %>
+    <%= link_to "Add festival", festivals_index_path, class: "waves-effect waves-light btn-large" %>
   </div>
 </div>
