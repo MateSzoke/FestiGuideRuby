@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-wrapper">
     <div class="col s12">
-      <%= link_to "Festivals", festivals_index_path, class: "breadcrumb" %>
+      <%= link_to "Festivals", festivals_path, class: "breadcrumb" %>
       <a class="breadcrumb" href=""><%= @festival.name %></a>
     </div>
   </div>
@@ -38,9 +38,9 @@
   </table>
 
   <div class="center">
-    <%= link_to "Edit", add_festival_new_path, class: "waves-effect waves-light btn-large" %>
+    <%= link_to "Edit", edit_festival_path, class: "waves-effect waves-light btn-large" %>
 
-    <%= link_to festivals_index_path do %>
+    <%= link_to festivals_path do %>
       <%= image_tag "https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png", :style => "height: 50px; margin-top: 25px; padding-top: 20px; margin-left: 20px" %>
     <% end %>
   </div>

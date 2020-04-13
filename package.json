@@ -1,6 +1,17 @@
 {
   "name": "festiguide",
+  "description": "Festival program maker for Ruby on Rails homework",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateSzoke/FestiGuideRuby.git"
+  },
+  "author": "MateSzoke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MateSzoke/FestiGuideRuby/issues"
+  },
+  "homepage": "https://github.com/MateSzoke/FestiGuideRuby#readme",
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
