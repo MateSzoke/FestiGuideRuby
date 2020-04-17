@@ -28,7 +28,7 @@ class FestivalBasesController < ApplicationController
 
   def update
     if @festival.update(festival_params)
-      redirect_to @festival, notice: 'Festival was successfully updated.'
+      redirect_to edit_programs_path(id: @festival.id)
     else
       render :edit
     end

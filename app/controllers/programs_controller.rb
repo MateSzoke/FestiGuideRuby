@@ -12,15 +12,20 @@ class ProgramsController < ApplicationController
     redirect_to festival_bases_path
   end
 
-  def edit;
+  def edit
+    @shows = []
+    @days.each do |day|
+      @showstmp = Show.where(day_id: day.id)
+      @showstmp.each do |show|
+        @shows << show
+      end
+    end
   end
 
   def update
-    flash[:notice] = if @days.update(program_params)
-                       'Update successful'
-                     else
-                       'Could not update data'
-                     end
+    @days.each do |day|
+      @show = Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date)
+    end
     redirect_to festival_bases_path
   end
 

@@ -9,23 +9,25 @@
           <p><%= l day.date, format: :date %></p>
         </div>
       </div>
-      <%# (0..2).each do |_| %>
-      <div class="row">
-        <div class="input-field col m2">
-          <%= form.label 'Performer' %>
-          <%= form.text_field :performer %>
-        </div>
-        <div class="input-field col m2">
-          <%= form.label 'Time' %>
-          <%= form.text_field :time %>
-        </div>
-      </div>
-      <%# end %>
+      <% @shows.each do |show| %>
+        <% if show.date.to_i == day.date.to_i %>
+          <div class="row">
+            <div class="input-field col m2">
+              <%= form.label 'Performer' %>
+              <%= form.text_field show.performer %>
+            </div>
+            <div class="input-field col m2">
+              <%= form.label 'Time' %>
+              <%= form.text_field show.time %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
 
     <div class="center">
       <%= link_to "Cancel", festival_bases_path, class: "waves-effect btn-large background transparent", style: "color: #5a5a5a" %>
-      <div class="waves-effect waves-light btn-large"><%= form.submit "Add festival" %></div>
+      <div class="waves-effect waves-light btn-large"><%= form.submit "Edit festival" %></div>
     </div>
   <% end %>
 </div>

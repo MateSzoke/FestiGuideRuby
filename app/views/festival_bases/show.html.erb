@@ -39,9 +39,6 @@
 
   <div class="center">
     <%= link_to "Edit", edit_festival_basis_path, class: "waves-effect waves-light btn-large" %>
-
-    <%= link_to @festival, method: :delete, data: {confirm: 'Are you sure?'} do %>
-      <%= image_tag "https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png", :style => "height: 50px; margin-top: 25px; padding-top: 20px; margin-left: 20px" %>
-    <% end %>
+    <div class="waves-effect btn-large background transparent"><%= button_to 'Destroy', {controller: :festival_bases, action: :destroy, id: @festival.id}, method: :delete, data: {confirm: 'Are you sure?'} %></div>
   </div>
 </div>
