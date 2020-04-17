@@ -1,7 +1,7 @@
 <div class="row">
   <% @festivals.each { |festival| %>
     <div class="col s12 m4 l3">
-      <%= link_to festival_path do %>
+      <%= link_to "/festival/#{festival.id}" do %>
         <div class="card festival-card">
           <div class="card-image">
             <%= image_tag festival.imgSrc, :style => "height: 250px" %>

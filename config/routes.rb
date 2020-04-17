@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-
   resources :festival_bases, path: 'festivals'
-  get 'add_festival/stage'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'festival/:id', to: 'festival_bases#show'
+  get 'programs/new/:id', to: 'programs#new', as: 'new_programs'
+  post 'programs/new/:id', to: 'programs#create', as: 'create_programs'
+  get 'programs/edit/:id', to: 'programs#edit', as: 'edit_programs'
+  put 'programs/update/:id', to: 'programs#update', as: 'update_programs'
 end

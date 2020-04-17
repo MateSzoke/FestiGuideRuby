@@ -11,7 +11,6 @@
     </div>
   <% end %>
   <div class="row">
-    <form class="col s6">
       <div class="row">
         <div class="field row input-field col m6">
           <%= form.label 'Festival name' %>
@@ -34,26 +33,17 @@
           <%= form.text_field :stage %>
         </div>
       </div>
-    </form>
-    <form action="#" class="col s6">
       <div class="file-field input-field">
-        <div class="btn">
-          <span>Browse image</span>
-          <input type="file">
-        </div>
-        <div class="file-path-wrapper">
-          <%= form.label :imgSrc %>
-          <%= form.text_field :imgSrc %>
-        </div>
+        <%= form.label :imgSrc %>
+        <%= form.text_field :imgSrc %>
       </div>
-      <div class="card-image">
-        <img src="https://www.programturizmus.hu/media/image/big/ajanlat/kultura/koncert-zene/popzene/29/7592-nagyon-zene-fesztival.jpg">
-      </div>
-    </form>
+    <div class="card-image">
+      <img src="https://www.programturizmus.hu/media/image/big/ajanlat/kultura/koncert-zene/popzene/29/7592-nagyon-zene-fesztival.jpg">
+    </div>
   </div>
 
   <div class="center">
     <%= link_to "Cancel", festival_bases_path, class: "waves-effect btn-large background transparent", style: "color: #5a5a5a" %>
-    <div class="waves-effect waves-light btn-large"><%= form.submit "" %>Next</div>
+    <div class="waves-effect waves-light btn-large"><%= form.submit "Next" %></div>
   </div>
 <% end %>
