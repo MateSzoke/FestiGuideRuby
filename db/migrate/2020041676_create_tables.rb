@@ -1,10 +1,10 @@
 class CreateTables < ActiveRecord::Migration[6.0]
   def change
     create_table :festival_bases do |t|
-      t.string :name, limit: 100
+      t.string :name, limit: 100, null: false
       t.string :imgSrc
-      t.datetime :startDate
-      t.datetime :endDate
+      t.datetime :startDate, null: false
+      t.datetime :endDate, null: false
       t.string :stage
 
       t.timestamps

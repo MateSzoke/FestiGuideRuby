@@ -10,14 +10,14 @@
         </div>
       </div>
       <% @shows.each do |show| %>
-        <% if show.date.to_i == day.date.to_i %>
+        <% if show.day_id == day.id %>
           <div class="row">
             <div class="input-field col m2">
-              <%= form.label 'Performer' %>
+              <div>Performer</div>
               <%= form.text_field show.performer %>
             </div>
             <div class="input-field col m2">
-              <%= form.label 'Time' %>
+              <div>Time</div>
               <%= form.text_field show.time %>
             </div>
           </div>

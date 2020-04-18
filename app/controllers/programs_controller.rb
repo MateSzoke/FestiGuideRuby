@@ -1,5 +1,6 @@
 class ProgramsController < ApplicationController
   before_action :set_festival
+  before_action :set_shows, only: %i[edit update]
 
   def new
   end
@@ -13,18 +14,15 @@ class ProgramsController < ApplicationController
   end
 
   def edit
-    @shows = []
-    @days.each do |day|
-      @showstmp = Show.where(day_id: day.id)
-      @showstmp.each do |show|
-        @shows << show
-      end
-    end
   end
 
   def update
     @days.each do |day|
-      @show = Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date)
+      @shows.each do |show|
+        if show.day_id == day.id
+          Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date)
+        end
+      end
     end
     redirect_to festival_bases_path
   end
@@ -37,6 +35,16 @@ class ProgramsController < ApplicationController
   def set_festival
     @festival = FestivalBase.find(params[:id])
     @days = Day.where(festival_base_id: @festival.id)
+  end
+
+  def set_shows
+    @shows = []
+    @days.each do |day|
+      @showstmp = Show.where(day_id: day.id)
+      @showstmp.each do |show|
+        @shows << show
+      end
+    end
   end
 
   def program_params

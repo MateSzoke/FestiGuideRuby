@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020041675) do
+ActiveRecord::Schema.define(version: 2020041676) do
 
   create_table "days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "festival_base_id"
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2020041675) do
   end
 
   create_table "festival_bases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", limit: 100
+    t.string "name", limit: 100, null: false
     t.string "imgSrc"
-    t.datetime "startDate"
-    t.datetime "endDate"
+    t.datetime "startDate", null: false
+    t.datetime "endDate", null: false
     t.string "stage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -27,7 +27,7 @@
     <% @days.each do |day| %>
       <tr style="display: table-cell">
         <% @shows.each do |show| %>
-          <% if show.date.to_i == day.date.to_i %>
+          <% if show.day_id == day.id %>
             <td style="display: block"><%= "#{show.performer} #{show.time}" %></td>
           <% end %>
         <% end %>

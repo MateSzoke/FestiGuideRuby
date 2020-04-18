@@ -11,10 +11,10 @@
     </div>
   <% end %>
   <div class="row">
-      <div class="row">
-        <div class="field row input-field col m6">
-          <%= form.label 'Festival name' %>
-          <%= form.text_field :name %>
+    <div class="row">
+      <div class="field row input-field col m6">
+        <div>Festival name</div>
+        <%= form.text_field :name %>
         </div>
       </div>
       <div class="row">
@@ -27,19 +27,16 @@
           <%= form.date_field :endDate %>
         </div>
       </div>
-      <div class="row">
-        <div class="input-field col m6">
-          <%= form.label :stage %>
-          <%= form.text_field :stage %>
-        </div>
+    <div class="row">
+      <div class="input-field col m6">
+        <div>Stage</div>
+        <%= form.text_field :stage %>
       </div>
-      <div class="file-field input-field">
-        <%= form.label :imgSrc %>
-        <%= form.text_field :imgSrc %>
-      </div>
-    <div class="card-image">
-      <img src="https://www.programturizmus.hu/media/image/big/ajanlat/kultura/koncert-zene/popzene/29/7592-nagyon-zene-fesztival.jpg">
     </div>
+    <div class="file-field input-field col m12">
+      <div>Festival image url (please insert here a valid image url)</div>
+      <%= form.text_field :imgSrc %>
+      </div>
   </div>
 
   <div class="center">
