@@ -20,11 +20,11 @@ class ProgramsController < ApplicationController
     @days.each do |day|
       @shows.each do |show|
         if show.day_id == day.id
-          Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date)
+          # Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date) TODO fix show update
         end
       end
     end
-    redirect_to festival_bases_path
+    redirect_to "/festival/#{@festival.id}"
   end
 
   def show;
