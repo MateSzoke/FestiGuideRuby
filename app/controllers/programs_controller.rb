@@ -1,13 +1,12 @@
 class ProgramsController < ApplicationController
   before_action :set_festival
-  before_action :set_shows, only: %i[edit update]
+  before_action :set_shows, only: %i[edit]
+  before_action :set_params, only: %i[create update]
 
   def new
   end
 
   def create
-    @performer = params.require(:performer)
-    @time = params.require(:time)
     i = 0
     @days.each do |day|
       puts i
@@ -24,12 +23,13 @@ class ProgramsController < ApplicationController
   end
 
   def update
+    i = 0
     @days.each do |day|
-      @shows.each do |show|
-        if show.day_id == day.id
-          # Show.update(day_id: day.id, performer: :performer, time: :time, date: day.date) TODO fix show update
-        end
-      end
+      puts i
+      puts @performer[i]
+      puts @time[i]
+      Show.where(day_id: day.id).update(performer: @performer[i], time: @time[i], date: day.date)
+      i += 1
     end
     redirect_to "/festival/#{@festival.id}"
   end
@@ -51,12 +51,13 @@ class ProgramsController < ApplicationController
       @showstmp.each do |show|
         @shows << show
       end
+      puts @shows
     end
   end
 
-  def program_params
-
-    params.require(@show).permit(:performer, :time)
+  def set_params
+    @performer = params.require(:performer)
+    @time = params.require(:time)
   end
 
 end

@@ -1,5 +1,5 @@
 <div class="top-left-margin">
-  <%= link_to "Back", edit_festival_basis_path, class: "waves-effect waves-light btn-large row m2" %>
+  <%= link_to "Back", edit_festival_basis_path, class: "waves-effect background black btn-large row m2" %>
 </div>
 <div class="row col m6" style="margin-left: 25px"><b><%= @festival.stage %></b>
   <%= form_with(model: @show) do |form| %>
@@ -14,11 +14,11 @@
           <div class="row">
             <div class="input-field col m2">
               <div>Performer</div>
-              <%= form.text_field show.performer, multiple: true %>
+              <%= form.text_field :performer, :value => show.performer, multiple: true %>
             </div>
             <div class="input-field col m2">
               <div>Time</div>
-              <%= form.text_field show.time, multiple: true, maxlength: 6, size: 6 %>
+              <%= form.text_field :time, :value => show.time, multiple: true, maxlength: 6, size: 6 %>
             </div>
           </div>
         <% end %>
@@ -27,7 +27,7 @@
 
     <div class="center">
       <%= link_to "Cancel", festival_bases_path, class: "waves-effect btn-large background transparent", style: "color: #5a5a5a" %>
-      <div class="waves-effect waves-light btn-large"><%= form.submit "Edit festival" %></div>
+      <div class="waves-effect"><%= form.submit "EDIT FESTIVAL", class: "btn-large btn-large background black" %></div>
     </div>
   <% end %>
 </div>
