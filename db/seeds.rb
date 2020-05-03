@@ -10,7 +10,6 @@ festivals = FestivalBase.create([
 festivals.each do |festival|
   festival.startDate.to_date.upto(festival.endDate.to_date).each do |date|
     day = Day.create(date: date.to_datetime, festival_base_id: festival.id)
-    Show.create(day_id: day.id, performer: 'Akkezdet Phiai', time: '19:00', date: day.date)
     Show.create(day_id: day.id, performer: '30Y', time: '20:30', date: day.date)
   end
 end
