@@ -1,24 +1,10 @@
-# README
+# The FestiGuide on Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can create festivals with programs here. 
 
-Things you may want to cover:
+![The festivals](https://scontent-vie1-1.xx.fbcdn.net/v/t1.15752-9/93822900_675672122979596_789250302778802176_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=RcI_ZcFfS8IAX960-0C&_nc_ht=scontent-vie1-1.xx&oh=2cf8e11108f6aa3ff38afde780ccc05c&oe=5EC19B21)
 
-* Ruby version
+## Technologies
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby on Rails
+- MySQL
