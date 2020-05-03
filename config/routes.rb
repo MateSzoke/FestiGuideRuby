@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'festival_bases#index'
   resources :festival_bases, path: 'festivals/'
   get 'festival/:id', to: 'festival_bases#show'
   get 'programs/new/:id', to: 'programs#new', as: 'new_programs'

@@ -6,9 +6,16 @@ class ProgramsController < ApplicationController
   end
 
   def create
+    @performer = params.require(:performer)
+    @time = params.require(:time)
+    i = 0
     @days.each do |day|
-      @show = Show.new(day_id: day.id, performer: :performer, time: :time, date: day.date)
+      puts i
+      puts @performer[i]
+      puts @time[i]
+      @show = Show.new(day_id: day.id, performer: @performer[i], time: @time[i], date: day.date)
       @show.save
+      i += 1
     end
     redirect_to festival_bases_path
   end

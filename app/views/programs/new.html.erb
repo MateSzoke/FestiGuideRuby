@@ -13,11 +13,11 @@
       <div class="row">
         <div class="input-field col m2">
           <div>Performer</div>
-          <%= form.text_field :performer %>
+          <%= form.text_field :performer, multiple: true %>
         </div>
         <div class="input-field col m2">
           <div>Time</div>
-          <%= form.text_field :time %>
+          <%= form.text_field :time, multiple: true, maxlength: 6, size: 6 %>
         </div>
       </div>
       <%# end %>
