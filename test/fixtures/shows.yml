@@ -1,0 +1,35 @@
+sone:
+  day_id: one.id
+  performer: 30Y
+  time: 20:30
+  date: one.date
+
+stwo1:
+  day: two
+  performer: 30Y
+  time: 20:30
+  date: <%= two.date %>
+
+stwo2:
+  day: two
+  performer: Parov Stelar
+  time: 22:30
+  date: <%= two.date %>
+
+sthree:
+  day: three
+  performer: 30Y
+  time: 20:30
+  date: <%= three.date %>
+
+sfour:
+  day: four
+  performer: 30Y
+  time: 20:30
+  date: <%= four.date %>
+
+sfive:
+  day: five
+  performer: 30Y
+  time: 20:30
+  date: <%= five.date %>

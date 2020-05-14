@@ -1,0 +1,13 @@
+sziget:
+  name: Sziget festival
+  imgSrc: https://kep.cdn.index.hu/1/0/2890/28908/289084/28908499_2217455_277367d9f074a907c4266092b93a9c23_wm.jpg
+  startDate: <%= Time.new(2020, 8, 12) %>
+  endDate: <%= Time.new(2020, 8, 14) %>
+  stage: Nagy színpad
+
+strand:
+  name: Strand festival
+  imgSrc: https://vjm.hu/wp-content/uploads/2018/08/bestof_5.jpg
+  startDate: <%= Time.new(2020, 6, 2) %>
+  endDate: <%= Time.new(2020, 6, 3) %>
+  stage: Nagy színpad
