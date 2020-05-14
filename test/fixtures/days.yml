@@ -1,0 +1,19 @@
+one:
+  date: <%= Time.new(2020, 8, 12) %>
+  festival_base: sziget
+
+two:
+  date: <%= Time.new(2020, 8, 13) %>
+  festival_base: sziget
+
+three:
+  date: <%= Time.new(2020, 8, 14) %>
+  festival_base: sziget
+
+four:
+  date: <%= Time.new(2020, 6, 2) %>
+  festival_base: strand
+
+five:
+  date: <%= Time.new(2020, 6, 3) %>
+  festival_base: strand
